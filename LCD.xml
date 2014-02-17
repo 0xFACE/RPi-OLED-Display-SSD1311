@@ -1,0 +1,48 @@
+<lcd>
+   <!-- set this to video,music to disable the LCD on playback of music and video-->
+   <progressbarsurroundings>on</progressbarsurroundings>
+   <disableonplay></disableonplay>
+   <navigation>
+      <line>$INFO[System.CurrentWindow]</line>
+      <line>$INFO[System.CurrentControl]</line>
+      <line>$INFO[LCD.AlignCenter]$INFO[System.Time]</line>
+      <line>$INFO[LCD.AlignCenter]$INFO[System.Date(yyyy-mm-dd)]</line>
+   </navigation>
+   <music>
+      <line>$INFO[MusicPlayer.Title]</line>
+      <line>$INFO[LCD.ProgressBar]</line>
+      <line>$INFO[System.Time] $INFO[System.Date(yyyy-mm-dd)]</line>
+   </music>
+   <video>
+      <line>$INFO[VideoPlayer.Title]</line>
+      <line>$INFO[LCD.ProgressBar]</line>
+      <line>$INFO[LCD.PlayIcon] $INFO[Player.Time]/$INFO[Player.Duration]</line>
+      <line>$INFO[VideoPlayer.Genre]</line>
+   </video>
+   <general>
+      <line>$INFO[LCD.AlignCenter]$INFO[System.Time]</line>
+      <line>$INFO[LCD.AlignCenter]$INFO[System.Date(yyyy-mm-dd)]</line>
+   </general>
+   <screensaver>
+      <line>$INFO[LCD.TimeWide21]</line>
+      <line>$INFO[LCD.TimeWide22]</line>
+   </screensaver>
+   <xbelaunch>
+      <line>xbelaunch ???</line>
+      <line></line>
+      <line>Playing</line>
+      <line>$INFO[System.LaunchXBE]</line>
+   </xbelaunch>
+   <pvrtv>
+      <line>$INFO[VideoPlayer.ChannelName]</line>
+      <line>$INFO[VideoPlayer.Title]</line>
+      <line>$INFO[LCD.PlayIcon] $INFO[Player.Time]/$INFO[Player.Duration]</line>
+      <line>$INFO[LCD.ProgressBar]</line>
+   </pvrtv>
+   <pvrradio>
+      <line>$INFO[MusicPlayer.ChannelName]</line>
+      <line>$INFO[MusicPlayer.Title]</line>
+      <line>$INFO[LCD.PlayIcon] $INFO[Player.Time]/$INFO[Player.Duration]</line>
+      <line>$INFO[LCD.ProgressBar]</line>
+   </pvrradio>
+</lcd>
