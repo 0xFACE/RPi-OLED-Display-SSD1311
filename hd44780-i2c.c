@@ -51,9 +51,9 @@ void i2c_HD44780_senddata(PrivateData *p, unsigned char displayID, unsigned char
 void i2c_HD44780_backlight(PrivateData *p, unsigned char state);
 void i2c_HD44780_close(PrivateData *p);
 
-#define RS	0x10
-#define RW	0x20
-#define EN	0x40
+//#define RS	0x10
+//#define RW	0x20
+//#define EN	0x40
 #define BL	0x80
 // note that the above bits are all meant for the data port of PCF8574
 
@@ -74,7 +74,7 @@ i2c_out(PrivateData *p, unsigned char val[2])
 //	if (p->port & I2C_PCAX_MASK) { // we have a PCA9554 or similar, that needs a 2-byte command
 //		data[0]=1; // command: read/write output port register
 //		data[1]=val;
-		datalen=2;
+	datalen=2;
 //	} else { // we have a PCF8574 or similar, that needs a 1-byte command
 //		data[0]=val;
 //		datalen=1;
@@ -111,7 +111,7 @@ hd_init_i2c(Driver *drvthis)
 	PrivateData *p = (PrivateData*) drvthis->private_data;
 	HD44780_functions *hd44780_functions = p->hd44780_functions;
 
-	int enableLines = EN;
+//	int enableLines = EN;
 	char device[256] = DEFAULT_DEVICE;
 #ifdef HAVE_DEV_IICBUS_IIC_H
 	struct iiccmd cmd;
